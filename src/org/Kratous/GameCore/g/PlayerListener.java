@@ -16,7 +16,7 @@ import org.Kratous.GameCore.i.Logger;
 //import org.Kratous.GameCore.k.TaskChain12;
 import org.Kratous.GameCore.l.GamePlayer;
 import org.Kratous.GameCore.l.GamePlayerState;
-import org.Kratous.GameCore.o.Shape;
+import org.Kratous.GameCore.Shape.Shape;
 import org.Kratous.GameCore.q.BlockUtil1;
 import org.Kratous.GameCore.q.Util3;
 import java.util.ArrayList;

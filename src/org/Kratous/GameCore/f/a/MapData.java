@@ -2,9 +2,9 @@ package org.Kratous.GameCore.f.a;
 
 import org.Kratous.GameCore.f.a.a.MapDataException;
 import org.Kratous.GameCore.f.a.b.RegionRule;
-import org.Kratous.GameCore.o.Cuboid;
-import org.Kratous.GameCore.o.Cylinder;
-import org.Kratous.GameCore.o.Shape;
+import org.Kratous.GameCore.Shape.Cuboid;
+import org.Kratous.GameCore.Shape.Cylinder;
+import org.Kratous.GameCore.Shape.Shape;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;

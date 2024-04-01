@@ -1,4 +1,4 @@
-package org.Kratous.GameCore.o;
+package org.Kratous.GameCore.Shape;
 
 import java.util.ArrayList;
 import java.util.List;

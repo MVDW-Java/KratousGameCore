@@ -1,7 +1,7 @@
 package org.Kratous.GameCore.f.a;
 
 import org.Kratous.GameCore.f.a.b.RegionRule;
-import org.Kratous.GameCore.o.Shape;
+import org.Kratous.GameCore.Shape.Shape;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

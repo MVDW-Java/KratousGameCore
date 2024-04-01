@@ -2,7 +2,7 @@ package org.Kratous.GameCore.f.b;
 
 import org.Kratous.GameCore.e.c.Hologram1;
 import org.Kratous.GameCore.f.a.MapTeam;
-import org.Kratous.GameCore.o.Shape;
+import org.Kratous.GameCore.Shape.Shape;
 import org.bukkit.ChatColor;
 import org.bukkit.World;
 

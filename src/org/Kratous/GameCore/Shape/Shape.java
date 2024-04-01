@@ -1,4 +1,4 @@
-package org.Kratous.GameCore.o;
+package org.Kratous.GameCore.Shape;
 
 import java.util.List;
 import org.bukkit.util.Vector;

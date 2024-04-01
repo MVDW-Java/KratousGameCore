@@ -9,7 +9,7 @@ import org.Kratous.GameCore.f.a.MapWall;
 import org.Kratous.GameCore.f.a.b.RegionRule;
 import org.Kratous.GameCore.l.GamePlayer;
 import org.Kratous.GameCore.l.GamePlayerState;
-import org.Kratous.GameCore.o.Shape;
+import org.Kratous.GameCore.Shape.Shape;
 import org.Kratous.GameCore.q.BlockUtil1;
 import java.util.ArrayList;
 import java.util.HashMap;

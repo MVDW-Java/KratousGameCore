@@ -7,7 +7,7 @@ import org.Kratous.GameCore.f.a.MapTeam;
 import org.Kratous.GameCore.f.a.a.MapDataException;
 import org.Kratous.GameCore.g.a.PlayerKilledEvent;
 import org.Kratous.GameCore.l.GamePlayer;
-import org.Kratous.GameCore.o.Cylinder;
+import org.Kratous.GameCore.Shape.Cylinder;
 import org.Kratous.GameCore.q.Util3;
 import java.util.ArrayList;
 import java.util.HashMap;

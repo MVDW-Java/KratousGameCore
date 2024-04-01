@@ -1,4 +1,4 @@
-package org.Kratous.GameCore.c;
+package org.Kratous.GameCore.Database;
 
 import org.Kratous.GameCore.Core;
 import com.jolbox.bonecp.BoneCP;

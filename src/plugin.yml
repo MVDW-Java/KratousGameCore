@@ -1,0 +1,84 @@
+name: GameCore
+main: a.a.a.Core #com.minigamemc.gamecore.Core
+version: "1.32"
+author: JayNZ, Spurlex
+softdepend: [Vault]
+
+commands:
+    forcenext:
+        description: Set the next map to be played
+        permission: gamecore.forcenext
+        usage: /forcenext <mapname>
+        aliases: [upnext, next]
+    cycle:
+        description: Force the current map to end
+        permission: gamecore.cycle
+        usage: /cycle
+    reloadmaps:
+        description: Reload all the loaded maps
+        permission: gamecore.reloadmaps
+        usage: /reloadmaps
+    reloadgames:
+        description: Reload all the loaded game modes
+        permission: gamecore.reloadgames
+        usage: /reloadgames
+    restartnext:
+        description: Restart the server after the current game
+        permission: gamecore.restart
+        usage: /restartnext
+    cancelrestart:
+        description: Resets the game counter to 0 to cancel restarts
+        permission: gamecore.restart
+        usage: /cancelrestart
+    spectate:
+        description: Set yourself as a spectator
+        usage: /spectator
+    tutorial:
+        description: Enter the tutorial
+        usage: /tutorial
+    teamchat:
+        description: Toggle team chat
+        usage: /tc <message>
+        aliases: [tc]
+    invisible:
+        description: Toggles invisible move
+        usage: /invisible
+        permission: gamecore.invisible
+    spy:
+        description: See chat messages from all over the server
+        usage: /spy
+        permission: gamecore.spy
+    help:
+        description: Get information on the map
+        usage: /help
+    rules:
+        description: Get the rules
+        usage: /rules
+    toggle:
+        description: Toggle chat/deathmessages/gamemessages/blood
+        usage: /toggle <option>
+    lobby:
+        description: Go back to the lobby
+        usage: /lobby
+        aliases: [leave, quit]
+    join:
+        description: Join the game
+        usage: /join
+    rotation:
+        description: Displays current servers map rotation list
+        usage: /rotation
+    boost:
+        description: boost
+        usage: /boost
+    forcestart:
+        description: Force the game to start
+        usage: /forcestart
+        permission: gamecore.forcestart
+    particles:
+        description: Do stuff with your particle effects
+        usage: /particles <action>
+        permission: gamecore.vip
+    gamecore:
+        description: Do stuff with the GameCore plugin
+        usage: /gamecore <action>
+        aliases: [gc]

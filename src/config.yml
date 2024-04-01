@@ -1,0 +1,34 @@
+licence: 123-123-123-123-123
+configVersion: 1.2
+game:
+    timer:
+        lobby: 10
+        warmup: 10
+        cooldown: 10
+    minimumPlayers: 2
+    selectableKits: false
+    selectableTeams: true
+    mapsBeforeRestart: 15
+    votingEnabled: true
+    bossbarEnabled: true
+    maxPlayers: 100
+    spectatorEnabled: false
+    name: PVP1
+    mark2: false
+    websiteUrl: Kratous.net
+    websiteShortUrl: Krato.us
+    serverName: Kratous
+    motd: true
+    teamChat: true
+
+language:
+    game:
+        gamemodes:
+            DTC: "Destroy The Core"
+            DTM: "Destroy The Monument"
+            TDM: "Team Death Match"
+            NOVA: "Nova"
+            KILLCONFIRMED: "Kill Confirmed"
+            CTW: "Capture The Wool"
+            FFA: "Free For All"
+            DTB: "Destory The Bomb"

@@ -1,5 +1,5 @@
 name: GameCore
-main: a.a.a.Core #com.minigamemc.gamecore.Core
+main: org.Kratous.GameCore.Core #com.minigamemc.gamecore.Core
 version: "1.32"
 author: JayNZ, Spurlex
 softdepend: [Vault]

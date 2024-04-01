@@ -1,8 +1,8 @@
 package a.a.a.k;
 
-public abstract class TaskChain10 extends TaskChain8 {
+public abstract class TaskChain10 {
    public TaskChain10() {
-      super(null);
+      //super(null);
    }
 
    protected abstract Object d(Object var1);

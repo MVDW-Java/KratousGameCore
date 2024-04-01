@@ -324,7 +324,7 @@ public class GameRunnable1 extends BukkitRunnable {
          gPlayer = null;
 
          Iterator var5;
-         GamePlayer gPlayer;
+         GamePlayer gPlayer1;
          for(var5 = this.bl.aT().aD().iterator(); var5.hasNext(); ++i) {
             gPlayer = (GamePlayer)var5.next();
             if (i > 3) {
@@ -406,17 +406,17 @@ public class GameRunnable1 extends BukkitRunnable {
          Iterator var9 = winningPlayers.iterator();
 
          while(var9.hasNext()) {
-            GamePlayer gPlayer = (GamePlayer)var9.next();
+            GamePlayer gPlayer1 = (GamePlayer)var9.next();
             switch(i) {
             case 0:
-               this.bl.aT().a(gPlayer, MapRewardType.cx);
-               gPlayer.dC().a(AchievementType.D, 1);
+               this.bl.aT().a(gPlayer1, MapRewardType.cx);
+               gPlayer1.dC().a(AchievementType.D, 1);
                break;
             case 1:
-               this.bl.aT().a(gPlayer, MapRewardType.cy);
+               this.bl.aT().a(gPlayer1, MapRewardType.cy);
                break;
             case 2:
-               this.bl.aT().a(gPlayer, MapRewardType.cz);
+               this.bl.aT().a(gPlayer1, MapRewardType.cz);
             }
          }
       }

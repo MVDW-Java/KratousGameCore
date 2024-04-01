@@ -56,7 +56,7 @@ import org.bukkit.util.Vector;
 
 public class GamePlayer extends GamePlayerData {
    private Player player;
-   private MapTeam do;
+   private MapTeam aa;
    private GamePlayerState gs;
    private MapKit gt;
    private PlayerAchievementHandler gu;
@@ -70,7 +70,7 @@ public class GamePlayer extends GamePlayerData {
    public GamePlayer(Player player, GamePlayerData data) {
       super(data);
       this.player = player;
-      this.do = null;
+      this.aa = null;
       this.gs = GamePlayerState.gY;
       this.gt = null;
       this.gy = new LinkedList();
@@ -119,11 +119,11 @@ public class GamePlayer extends GamePlayerData {
    }
 
    public void g(MapTeam team) {
-      this.do = team;
+      this.aa = team;
    }
 
    public MapTeam ca() {
-      return this.do;
+      return this.aa;
    }
 
    public void a(GamePlayerState state) {
@@ -323,29 +323,28 @@ public class GamePlayer extends GamePlayerData {
 
       for(int inventorySlot = 0; inventorySlot <= 103; ++inventorySlot) {
          if (inventorySlot <= 35 || inventorySlot >= 100 && inventorySlot <= 103) {
-            stack = null;
-            ItemStack stack;
+            ItemStack a = null;
             if (((Map)inventorySet).containsKey(inventorySlot)) {
-               stack = BlockUtil1.a((ItemStack)((Map)inventorySet).get(inventorySlot));
+               a = BlockUtil1.a((ItemStack)((Map)inventorySet).get(inventorySlot));
             } else {
-               stack = new ItemStack(Material.AIR);
+               a = new ItemStack(Material.AIR);
             }
 
             switch(inventorySlot) {
             case 100:
-               this.player.getInventory().setBoots(stack);
+               this.player.getInventory().setBoots(a);
                break;
             case 101:
-               this.player.getInventory().setLeggings(stack);
+               this.player.getInventory().setLeggings(a);
                break;
             case 102:
-               this.player.getInventory().setChestplate(stack);
+               this.player.getInventory().setChestplate(a);
                break;
             case 103:
-               this.player.getInventory().setHelmet(stack);
+               this.player.getInventory().setHelmet(a);
                break;
             default:
-               this.player.getInventory().setItem(inventorySlot, stack);
+               this.player.getInventory().setItem(inventorySlot, a);
             }
          }
       }
@@ -366,19 +365,19 @@ public class GamePlayer extends GamePlayerData {
          spawn = Core.b().V().aS().bw().bO();
          return new Location(Core.b().V().getWorld(), (double)spawn.getBlockX(), (double)spawn.getBlockY(), (double)spawn.getBlockZ());
       case hb:
-         if (this.do == null) {
+         if (this.aa == null) {
             Core.b().V().aT().m(this);
             spawn = Core.d().cT().aS().bw().bO();
             return new Location(Core.d().cT().getWorld(), (double)spawn.getBlockX(), (double)spawn.getBlockY(), (double)spawn.getBlockZ());
          } else {
             if (Core.b().V().aU().equals(GameState.bB)) {
-               MapSpawn spawn = this.do.bR();
+               MapSpawn spawn2 = this.aa.bR();
                if (!Core.b().V().aS().bn().bd()) {
-                  this.gt = spawn.bM();
+                  this.gt = spawn2.bM();
                }
 
-               Vector vector = spawn.bO();
-               return new Location(Core.b().V().getWorld(), (double)vector.getBlockX(), (double)vector.getBlockY(), (double)vector.getBlockZ(), spawn.getYaw(), spawn.getPitch());
+               Vector vector = spawn2.bO();
+               return new Location(Core.b().V().getWorld(), (double)vector.getBlockX(), (double)vector.getBlockY(), (double)vector.getBlockZ(), spawn2.getYaw(), spawn2.getPitch());
             }
 
             spawn = Core.b().V().aS().bw().bO();
@@ -392,7 +391,7 @@ public class GamePlayer extends GamePlayerData {
    public void dP() {
       String name = this.player.getName();
       if (this.dH()) {
-         name = this.do.bP() + this.do.bQ() + this.player.getName();
+         name = this.aa.bP() + this.aa.bQ() + this.player.getName();
       } else if (this.gK) {
          name = ChatColor.ITALIC + this.player.getName();
       }

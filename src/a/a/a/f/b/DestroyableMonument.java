@@ -9,13 +9,13 @@ import org.bukkit.block.Block;
 public class DestroyableMonument {
    private String name;
    private Material material;
-   private MapTeam do;
+   private MapTeam aa;
    private List cw;
 
    public DestroyableMonument(String name, Material material, MapTeam team, List blocks) {
       this.name = name;
       this.material = material;
-      this.do = team;
+      this.aa = team;
       this.cw = blocks;
    }
 
@@ -24,7 +24,7 @@ public class DestroyableMonument {
    }
 
    public MapTeam ca() {
-      return this.do;
+      return this.aa;
    }
 
    public List getBlocks() {

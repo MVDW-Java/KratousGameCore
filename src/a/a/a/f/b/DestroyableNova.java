@@ -9,12 +9,12 @@ public class DestroyableNova {
    private Entity entity;
    private Location aE;
    private int dQ;
-   private MapTeam do;
+   private MapTeam aa;
 
    public DestroyableNova(String name, Location location, MapTeam team, int hitsRequired) {
       this.name = name;
       this.aE = location;
-      this.do = team;
+      this.aa = team;
       this.dQ = hitsRequired;
    }
 
@@ -35,7 +35,7 @@ public class DestroyableNova {
    }
 
    public MapTeam ca() {
-      return this.do;
+      return this.aa;
    }
 
    public void a(Entity entity) {

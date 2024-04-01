@@ -46,7 +46,7 @@ public class PersonalScoreboard1 {
             String previousName = item.dn();
             switch(item.dm()) {
             case fn:
-               sideBar.setDisplayName(item.do());
+               sideBar.setDisplayName(item.toString());
                continue;
             case fp:
                item.l(String.valueOf(this.er.dZ()));
@@ -86,7 +86,7 @@ public class PersonalScoreboard1 {
                item.setEnabled(Core.b().V().aS().bn().bd());
             }
 
-            String nextName = item.do();
+            String nextName = item.toString();
             if (!previousName.equals(nextName)) {
                int score = item.getScore();
                sideBar.getScoreboard().resetScores(previousName);

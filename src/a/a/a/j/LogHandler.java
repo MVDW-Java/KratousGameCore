@@ -2,9 +2,8 @@ package a.a.a.j;
 
 import a.a.a.Core;
 import a.a.a.k.TaskChain11;
-import a.a.a.k.TaskChain12;
+//import a.a.a.k.TaskChain12;
 import a.a.a.k.TaskChain4;
-import a.a.a.k.TaskChain8;
 import a.a.a.l.GamePlayer;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +51,7 @@ public class LogHandler {
    }
 
    public void q(int length) {
-      TaskChain12.dx().a((TaskChain8)(new TaskChain4() {
+      /*TaskChain12.dx().a((TaskChain8)(new TaskChain4() {
          protected void run() {
          }
       })).a((TaskChain8)(new TaskChain11() {
@@ -62,6 +61,6 @@ public class LogHandler {
             LogHandler.this.fH.clear();
             LogHandler.this.fI.clear();
          }
-      })).execute();
+      })).execute();*/
    }
 }

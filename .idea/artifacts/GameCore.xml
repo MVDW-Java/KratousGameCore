@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="GameCore">
+    <output-path>$PROJECT_DIR$/out/artifacts/GameCore</output-path>
+    <root id="archive" name="GameCore.jar">
+      <element id="module-output" name="KratousGameCore1" />
+    </root>
+  </artifact>
+</component>

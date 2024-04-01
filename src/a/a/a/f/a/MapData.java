@@ -443,14 +443,14 @@ public class MapData {
                            throw new MapDataException("Could not find team " + team);
                         }
 
-                        teams.add(this.cc.get(team));
+                        //teams.add(this.cc.get(team));
                      }
                   } else {
                      if (!this.cc.containsKey(rule.getString("team"))) {
                         throw new MapDataException("Could not find team " + rule.getString("team"));
                      }
 
-                     teams.add(this.cc.get(rule.getString("team")));
+                     //teams.add(this.cc.get(rule.getString("team")));
                   }
                }
 

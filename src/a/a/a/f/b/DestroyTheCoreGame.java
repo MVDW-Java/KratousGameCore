@@ -289,9 +289,9 @@ public class DestroyTheCoreGame extends GameMap {
          switch(e.getBlock().getType()) {
          case LAVA:
          case STATIONARY_LAVA:
-            List<Block> lavaBlocks = this.a(e.getBlock(), new ArrayList(), 0);
+            List<Block> lavaBlocks1 = this.a(e.getBlock(), new ArrayList(), 0);
             DestroyableCore core = null;
-            var4 = lavaBlocks.iterator();
+            var4 = lavaBlocks1.iterator();
 
             while(var4.hasNext()) {
                Block block = (Block)var4.next();

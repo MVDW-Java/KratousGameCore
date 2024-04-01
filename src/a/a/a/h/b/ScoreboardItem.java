@@ -44,21 +44,19 @@ public class ScoreboardItem {
       this.enabled = value;
    }
 
-   public String do() {
-      if ((this.prefixColor + this.name).length() <= 16) {
-         return this.prefixColor + this.name;
-      } else {
-         String tempName = this.name + "     " + this.name;
-         int maxLength = this.fA.equals(PersonalScoreboardType.fn) ? 20 : 16;
-         maxLength -= this.prefixColor.toString().length();
-         ++this.fB;
-         if (this.name.substring(0, 10).equals(tempName.substring(this.fB, this.fB + 10)) || this.fB + maxLength > tempName.length() - 1) {
-            this.fB = 0;
-         }
+   public String ScoreboardString() {
+      if ((prefixColor + name).length() <= 16)  return this.prefixColor + this.name;
 
-         this.fy = this.prefixColor + tempName.substring(this.fB, this.fB + maxLength);
-         return this.fy;
+      String tempName = this.name + "     " + this.name;
+      int maxLength = this.fA.equals(PersonalScoreboardType.fn) ? 20 : 16;
+      maxLength -= this.prefixColor.toString().length();
+      ++this.fB;
+      if (this.name.substring(0, 10).equals(tempName.substring(this.fB, this.fB + 10)) || this.fB + maxLength > tempName.length() - 1) {
+         this.fB = 0;
       }
+
+      fy = this.prefixColor + tempName.substring(this.fB, this.fB + maxLength);
+      return fy;
    }
 
    public String l(String val) {

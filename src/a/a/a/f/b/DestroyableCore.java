@@ -10,7 +10,7 @@ import org.bukkit.block.Block;
 public class DestroyableCore {
    private String name;
    private Material material;
-   private MapTeam do;
+   private MapTeam aa;
    private List cw;
    private Block dO;
    private boolean cK;
@@ -20,7 +20,7 @@ public class DestroyableCore {
    public DestroyableCore(String name, Material material, MapTeam team, List blocks, int minDistance, Shape shape) {
       this.name = name;
       this.material = material;
-      this.do = team;
+      this.aa = team;
       this.cw = blocks;
       this.dP = minDistance;
       this.cK = true;
@@ -46,7 +46,7 @@ public class DestroyableCore {
    }
 
    public MapTeam ca() {
-      return this.do;
+      return this.aa;
    }
 
    public List getBlocks() {

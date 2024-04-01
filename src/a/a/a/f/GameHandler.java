@@ -450,11 +450,11 @@ public class GameHandler {
 
                while(var1.hasNext()) {
                   Player p = (Player)var1.next();
-                  GamePlayer gPlayer = Core.c().r(p.getName());
-                  if (gPlayer != null) {
-                     gPlayer.g((MapTeam)null);
-                     gPlayer.a(GamePlayerState.gY);
-                     gPlayer.dN();
+                  GamePlayer gPlayer1 = Core.c().r(p.getName());
+                  if (gPlayer1 != null) {
+                     gPlayer1.g((MapTeam)null);
+                     gPlayer1.a(GamePlayerState.gY);
+                     gPlayer1.dN();
                   }
                }
             }

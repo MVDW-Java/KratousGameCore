@@ -9,13 +9,13 @@ public class CapturablePointWool {
    private Block block;
    private String name;
    private DyeColor dn;
-   private MapTeam do;
+   private MapTeam aa;
 
    public CapturablePointWool(String name, Block block, String color, MapTeam team) {
       this.block = block;
       this.name = name;
       this.dn = DyeColor.valueOf(color.replace(" ", "_").toUpperCase());
-      this.do = team;
+      this.aa = team;
    }
 
    public Block getBlock() {
@@ -31,7 +31,7 @@ public class CapturablePointWool {
    }
 
    public MapTeam ca() {
-      return this.do;
+      return this.aa;
    }
 
    public boolean cd() {

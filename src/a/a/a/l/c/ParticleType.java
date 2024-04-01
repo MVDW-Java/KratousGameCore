@@ -25,7 +25,7 @@ public enum ParticleType {
    ib(Material.BLAZE_POWDER, EnumParticle.TOWN_AURA, ParticleStyle.hH, "Aura Halo", 7),
    ic(Material.BLAZE_POWDER, EnumParticle.TOWN_AURA, ParticleStyle.hG, "Aura Aura", 7),
    ie(Material.BLAZE_POWDER, EnumParticle.TOWN_AURA, ParticleStyle.hF, "Aura Feet", 7),
-   if(Material.MILK_BUCKET, (EnumParticle)null, ParticleStyle.hH, "Remove Halo Particles", 8),
+   //if(Material.MILK_BUCKET, (EnumParticle)null, ParticleStyle.hH, "Remove Halo Particles", 8),
    ig(Material.MILK_BUCKET, (EnumParticle)null, ParticleStyle.hG, "Remove Aura Particles", 8),
    ih(Material.MILK_BUCKET, (EnumParticle)null, ParticleStyle.hF, "Remove Trail Particles", 8);
 

@@ -13,7 +13,7 @@ import org.bukkit.util.Vector;
 
 public class DetonatableBomb {
    private String name;
-   private MapTeam do;
+   private MapTeam ScoreboardString;
    private Block block;
    private EntityTNTPrimed dR;
    private List dS;
@@ -28,7 +28,7 @@ public class DetonatableBomb {
 
    public DetonatableBomb(String name, MapTeam team, Block block, EntityTNTPrimed entity, WorldServer worldServer, Hologram1 hologram) {
       this.name = name;
-      this.do = team;
+      this.ScoreboardString = team;
       this.block = block;
       this.dR = entity;
       this.dT = worldServer;
@@ -47,7 +47,7 @@ public class DetonatableBomb {
    }
 
    public MapTeam ca() {
-      return this.do;
+      return this.ScoreboardString;
    }
 
    public Block getBlock() {

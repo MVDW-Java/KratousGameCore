@@ -133,7 +133,7 @@ public class DetonateTheBombGame extends GameMap {
                               bomb.cv();
                            } while(bomb.cz().equals(BombState.dh));
 
-                           GamePlayer gPlayer;
+                           GamePlayer gPlayer1;
                            if (bomb.cz().equals(BombState.dg) && bomb.cE() <= 0) {
                               bomb.a(BombState.dh);
                               var3 = Core.c().getPlayers().iterator();
@@ -172,7 +172,7 @@ public class DetonateTheBombGame extends GameMap {
 
                                     label168:
                                     while(true) {
-                                       GamePlayer gPlayer;
+                                       GamePlayer gPlayer2;
                                        do {
                                           if (!var10.hasNext()) {
                                              if (bomb.cD().isEmpty()) {
@@ -187,7 +187,7 @@ public class DetonateTheBombGame extends GameMap {
                                              double seconds = (double)bomb.cx() / 4.0D;
                                              Iterator var6 = Core.c().getPlayers().iterator();
 
-                                             GamePlayer gPlayer;
+                                             GamePlayer gPlayer3;
                                              while(var6.hasNext()) {
                                                 gPlayer = (GamePlayer)var6.next();
                                                 gPlayer.a(EnumParticle.FIREWORKS_SPARK, bomb.getBlock().getLocation(), 1.0F, 1);

@@ -242,7 +242,7 @@ public class Util3 {
    public static Inventory I(GamePlayer gPlayer) {
       Inventory inventory = Bukkit.createInventory(gPlayer.getPlayer(), 36, "Vote Tickets");
       int slotPointer = 28;
-
+/*
       Iterator stack;
       ItemStack stack;
       for(stack = gPlayer.dD().eY().iterator(); stack.hasNext(); ++slotPointer) {
@@ -277,7 +277,7 @@ public class Util3 {
          meta.setLore(lore);
          stack.setItemMeta(meta);
          inventory.setItem(item.getSlot(), stack);
-      }
+      }*/
 
       return inventory;
    }
@@ -295,23 +295,29 @@ public class Util3 {
    }
 
    public static List a(Map map) {
+      /*
       List<Entry<K, V>> sortedEntries = new ArrayList(map.entrySet());
       Collections.sort(sortedEntries, new Comparator() {
          public int compare(Entry o1, Entry o2) {
             return ((Comparable)o1.getValue()).compareTo(o2.getValue());
          }
       });
-      return sortedEntries;
+      return sortedEntries;*/
+      return null;
    }
 
    public static List b(Map map) {
+      /*
       List<Entry<K, V>> sortedEntries = new ArrayList(map.entrySet());
       Collections.sort(sortedEntries, new Comparator() {
          public int compare(Entry o1, Entry o2) {
             return ((Comparable)o2.getValue()).compareTo(o1.getValue());
          }
       });
-      return sortedEntries;
+
+
+      return sortedEntries;*/
+      return null;
    }
 
    public static void a(Location location, int distance, Sound sound, float amplitude, float pitch) {

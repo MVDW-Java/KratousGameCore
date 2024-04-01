@@ -13,13 +13,8 @@ import a.a.a.f.a.b.RegionRule;
 import a.a.a.f.a.b.RegionTeam;
 import a.a.a.g.a.PlayerKilledEvent;
 import a.a.a.i.Logger;
-import a.a.a.k.TaskChain11;
-import a.a.a.k.TaskChain12;
-import a.a.a.k.TaskChain5;
-import a.a.a.k.TaskChain8;
+//import a.a.a.k.TaskChain12;
 import a.a.a.l.GamePlayer;
-import a.a.a.l.GamePlayerData;
-import a.a.a.l.GamePlayerLoader;
 import a.a.a.l.GamePlayerState;
 import a.a.a.o.Shape;
 import a.a.a.q.BlockUtil1;
@@ -71,7 +66,6 @@ import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.player.PlayerFishEvent.State;
 import org.bukkit.event.player.PlayerLoginEvent.Result;
-import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 import org.bukkit.event.server.ServerListPingEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -99,7 +93,7 @@ public class PlayerListener implements Listener {
          e.getPlayer().sendMessage(ChatColor.RED + "You are running GameCore v" + ChatColor.GOLD + Core.a().getDescription().getVersion() + ChatColor.RED + ", the latest is GameCore v" + ChatColor.GOLD + Core.s);
       }
 
-      TaskChain12.dx().a((TaskChain8)(new TaskChain5() {
+      /*TaskChain12.dx().a((TaskChain8)(new TaskChain5() {
          protected GamePlayerData cN() {
             GamePlayerData gPlayerData = GamePlayerLoader.a(e.getPlayer().getUniqueId());
             return gPlayerData == null ? null : gPlayerData;
@@ -109,7 +103,7 @@ public class PlayerListener implements Listener {
          protected Object run() {
             return this.cN();
          }
-      })).a((TaskChain8)(new TaskChain11() {
+     // })).a((TaskChain8)(new TaskChain11() {
          protected void a(GamePlayerData data) {
             if (data == null) {
             }
@@ -119,7 +113,7 @@ public class PlayerListener implements Listener {
             gPlayer.dE().eO();
             gPlayer.a(Core.a("Currently Playing: " + ChatColor.GOLD + Core.b().V().aS().bk()), Core.a(Core.a().getConfig().getString("game.websiteUrl")));
          }
-      })).execute();
+     // })).execute();*/
    }
 
    @EventHandler(
@@ -170,7 +164,7 @@ public class PlayerListener implements Listener {
 
    @EventHandler
    public void a(final PlayerTeleportEvent e) {
-      TaskChain12.dx().a((TaskChain8)(new TaskChain5() {
+      /*TaskChain12.dx().a((TaskChain8)(new TaskChain5() {
          protected GamePlayer cO() {
             GamePlayer gPlayer = Core.c().a(e.getPlayer());
             return gPlayer;
@@ -219,7 +213,7 @@ public class PlayerListener implements Listener {
          protected void a(Object var1) {
             this.x((GamePlayer)var1);
          }
-      })).execute();
+      })).execute();*/
    }
 
    @EventHandler

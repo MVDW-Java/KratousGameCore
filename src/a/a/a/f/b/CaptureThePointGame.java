@@ -99,10 +99,10 @@ public class CaptureThePointGame extends GameMap {
                      var4 = Core.c().getPlayers().iterator();
 
                      while(var4.hasNext()) {
-                        GamePlayer gPlayer = (GamePlayer)var4.next();
-                        if (gPlayer.dH() && point.q(gPlayer) && point.ca().equals(gPlayer.ca())) {
-                           Core.g().a(gPlayer, ObjectiveType.fV, point.getName(), 0);
-                           this.a(gPlayer, MapRewardType.cB);
+                        GamePlayer gPlayer1 = (GamePlayer)var4.next();
+                        if (gPlayer1.dH() && point.q(gPlayer1) && point.ca().equals(gPlayer1.ca())) {
+                           Core.g().a(gPlayer1, ObjectiveType.fV, point.getName(), 0);
+                           this.a(gPlayer1, MapRewardType.cB);
                         }
                      }
                   }

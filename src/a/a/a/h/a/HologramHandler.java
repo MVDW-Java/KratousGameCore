@@ -5,9 +5,8 @@ import a.a.a.e.c.Hologram1;
 import a.a.a.f.a.MapData;
 import a.a.a.h.LobbyHandler;
 import a.a.a.k.TaskChain11;
-import a.a.a.k.TaskChain12;
+//import a.a.a.k.TaskChain12;
 import a.a.a.k.TaskChain5;
-import a.a.a.k.TaskChain8;
 import a.a.a.q.BlockUtil1;
 import a.a.a.q.Util3;
 import java.util.ArrayList;
@@ -241,11 +240,11 @@ public class HologramHandler {
                   hologram = (Hologram1)lobbyHologram.dh().get(0);
                }
 
-               TaskChain12.dx().a((TaskChain8)(new TaskChain5() {
+               /*TaskChain12.dx().a((TaskChain8)(new TaskChain5() {
                   protected List run() {
                      return HologramHandler.this.df();
                   }
-               })).a((TaskChain8)(new TaskChain11() {
+              })).a((TaskChain8)(new TaskChain11() {
                   protected void run(List topXP) {
                      hologram.setLine(0, Core.a("Top XP Overall"));
                      int i = 1;
@@ -261,7 +260,7 @@ public class HologramHandler {
                   protected void a(Object var1) {
                      this.run((List)var1);
                   }
-               })).execute();
+               })).execute();*/
                break;
             case eL:
                lobbyHologram.p(60);
@@ -272,7 +271,7 @@ public class HologramHandler {
                   hologram = (Hologram1)lobbyHologram.dh().get(0);
                }
 
-               TaskChain12.dx().a((TaskChain8)(new TaskChain5() {
+               /*TaskChain12.dx().a((TaskChain8)(new TaskChain5() {
                   protected List run() {
                      return HologramHandler.this.de();
                   }
@@ -292,7 +291,7 @@ public class HologramHandler {
                   protected void a(Object var1) {
                      this.run((List)var1);
                   }
-               })).execute();
+               })).execute();*/
                break;
             case eO:
                if (!Core.b().ag()) {
@@ -311,27 +310,27 @@ public class HologramHandler {
                      MapData data = (MapData)var6.next();
                      Location spawnLocation = (new Location(lobbyHologram.getLocation().getWorld(), lobbyHologram.getLocation().getX(), lobbyHologram.getLocation().getY(), lobbyHologram.getLocation().getZ() + (double)zPointer)).add(0.5D, 0.0D, 0.5D);
                      votes = Core.b().f(data.bk());
-                     Hologram1 hologram = (new Hologram1(spawnLocation)).O();
-                     hologram.d(ChatColor.GOLD + data.bk());
-                     hologram.d(ChatColor.DARK_AQUA + Util3.u(data.bj()));
-                     hologram.d(Core.b().f(data.bk()) + " Vote" + (votes == 1 ? "" : "s"));
-                     lobbyHologram.b(hologram);
-                     BlockUtil1.a(hologram.getLocation(), Material.TRIPWIRE, 0, true);
+                     Hologram1 hologram1 = (new Hologram1(spawnLocation)).O();
+                     hologram1.d(ChatColor.GOLD + data.bk());
+                     hologram1.d(ChatColor.DARK_AQUA + Util3.u(data.bj()));
+                     hologram1.d(Core.b().f(data.bk()) + " Vote" + (votes == 1 ? "" : "s"));
+                     lobbyHologram.b(hologram1);
+                     BlockUtil1.a(hologram1.getLocation(), Material.TRIPWIRE, 0, true);
                   }
                } else {
                   Map<Hologram1, Integer> order = new HashMap();
-                  int i = false;
+                  int i = 0;
                   Iterator var16 = lobbyHologram.dh().iterator();
 
                   while(var16.hasNext()) {
-                     Hologram1 hologram = (Hologram1)var16.next();
-                     votes = Core.b().f(((String)hologram.N().get(0)).replace(ChatColor.GREEN.toString(), "").replace(ChatColor.GOLD.toString(), ""));
-                     hologram.setLine(2, votes + " Vote" + (votes == 1 ? "" : "s"));
-                     order.put(hologram, votes);
-                     BlockUtil1.a(hologram.getLocation(), Material.TRIPWIRE, 0, true);
+                     Hologram1 hologram2 = (Hologram1)var16.next();
+                     votes = Core.b().f(((String)hologram2.N().get(0)).replace(ChatColor.GREEN.toString(), "").replace(ChatColor.GOLD.toString(), ""));
+                     hologram2.setLine(2, votes + " Vote" + (votes == 1 ? "" : "s"));
+                     order.put(hologram2, votes);
+                     BlockUtil1.a(hologram2.getLocation(), Material.TRIPWIRE, 0, true);
                   }
 
-                  int votes = (Integer)((Entry)Util3.b((Map)order).get(0)).getValue();
+                  int votes1 = (Integer)((Entry)Util3.b((Map)order).get(0)).getValue();
                   Iterator var19 = order.keySet().iterator();
 
                   label168:
@@ -341,12 +340,12 @@ public class HologramHandler {
                            break label168;
                         }
 
-                        Hologram1 hologram = (Hologram1)var19.next();
-                        String name = ((String)hologram.N().get(0)).replace(ChatColor.GREEN.toString(), "").replace(ChatColor.GOLD.toString(), "");
-                        if (((Integer)order.get(hologram)).equals(votes) && (Integer)order.get(hologram) > 0) {
-                           hologram.setLine(0, ChatColor.GREEN + name);
+                        Hologram1 hologram2 = (Hologram1)var19.next();
+                        String name = ((String)hologram2.N().get(0)).replace(ChatColor.GREEN.toString(), "").replace(ChatColor.GOLD.toString(), "");
+                        if (((Integer)order.get(hologram2)).equals(votes1) && (Integer)order.get(hologram2) > 0) {
+                           hologram2.setLine(0, ChatColor.GREEN + name);
                         } else {
-                           hologram.setLine(0, ChatColor.GOLD + name);
+                           hologram2.setLine(0, ChatColor.GOLD + name);
                         }
                      }
                   }

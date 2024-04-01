@@ -1,8 +1,8 @@
 package a.a.a.k;
 
-public abstract class TaskChain11 extends TaskChain8 {
+public abstract class TaskChain11 {
    public TaskChain11() {
-      super(null);
+      //super(null);
    }
 
    protected abstract void a(Object var1);
@@ -13,6 +13,6 @@ public abstract class TaskChain11 extends TaskChain8 {
    }
 
    public void next() {
-      this.c((Object)null);
+      //this.c((Object)null);
    }
 }

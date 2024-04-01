@@ -30,29 +30,27 @@ import org.bukkit.util.Vector;
 
 public class GameWorld {
    private boolean bG = false;
-   private String bH = UUID.randomUUID().toString();
-   private MapData bI;
-   private GameMap bJ;
+   private final String MapID = UUID.randomUUID().toString();
+   private final MapData MapData;
+   private GameMap GameMap;
    private World world;
-   private GameState bK;
+   private GameState GameState;
 
    public GameWorld(MapData data, GameMap gameMap) {
-      this.bI = data;
-      this.bJ = gameMap;
-      this.world = null;
-      this.bK = null;
-      if (this.bJ != null) {
-         this.bJ.a(this);
+      this.MapData = data;
+      this.GameMap = gameMap;
+      if (this.GameMap != null) {
+         this.GameMap.a(this);
       }
 
    }
 
    public MapData aS() {
-      return this.bI;
+      return this.MapData;
    }
 
    public GameMap aT() {
-      return this.bJ;
+      return this.GameMap;
    }
 
    public World getWorld() {
@@ -64,12 +62,12 @@ public class GameWorld {
    }
 
    public GameState aU() {
-      return this.bK;
+      return this.GameState;
    }
 
    public void a(GameState state) {
-      if (!this.bK.equals(GameState.bD)) {
-         this.bK = state;
+      if (!this.GameState.equals(GameState.bD)) {
+         this.GameState = state;
       }
    }
 
@@ -79,16 +77,16 @@ public class GameWorld {
       } else {
          this.aV();
          this.aX();
-         WorldCreator worldCreator = new WorldCreator(this.bH);
+         WorldCreator worldCreator = new WorldCreator(this.MapID);
          worldCreator.generator(new VoidGenerator());
          World world = Bukkit.getServer().createWorld(worldCreator);
          world.setAutoSave(false);
-         if (this.bI.bn().ba()) {
-            world.setFullTime((long)this.bI.bn().aZ());
+         if (this.MapData.bn().ba()) {
+            world.setFullTime((long)this.MapData.bn().aZ());
          }
 
          world.setSpawnFlags(false, false);
-         if (!this.bI.bn().bg()) {
+         if (!this.MapData.bn().bg()) {
             Iterator var3 = world.getLivingEntities().iterator();
 
             while(var3.hasNext()) {
@@ -99,12 +97,12 @@ public class GameWorld {
             }
          }
 
-         Vector spawn = this.bI.bw().bO();
+         Vector spawn = this.MapData.bw().bO();
          world.loadChunk(world.getChunkAt(new Location(world, (double)spawn.getBlockX(), (double)spawn.getBlockY(), (double)spawn.getBlockZ())));
          this.bG = true;
          this.world = world;
-         this.bK = GameState.bz;
-         Bukkit.getLogger().log(Level.INFO, "World " + this.bH + " (" + this.bI.bk() + ") successfully loaded");
+         this.GameState = GameState.bz;
+         Bukkit.getLogger().log(Level.INFO, "World " + this.MapID + " (" + this.MapData.bk() + ") successfully loaded");
       }
    }
 
@@ -128,9 +126,9 @@ public class GameWorld {
             throw new Exception("Bukkit failed to unload the world. Uhohhhh");
          } else {
             this.bG = false;
-            this.bJ = null;
+            this.GameMap = null;
             this.aV();
-            Bukkit.getLogger().log(Level.INFO, "World " + this.bH + " (" + this.bI.bk() + ") has been unloaded");
+            Bukkit.getLogger().log(Level.INFO, "World " + this.MapID + " (" + this.MapData.bk() + ") has been unloaded");
          }
       }
    }
@@ -164,7 +162,7 @@ public class GameWorld {
 
             while(var5.hasNext()) {
                Entry<File, RegionFile> entry = (Entry)var5.next();
-               if (((File)entry.getKey()).toString().startsWith("." + File.separator + this.bH)) {
+               if (((File)entry.getKey()).toString().startsWith("." + File.separator + this.MapID)) {
                   RegionFile rfile = (RegionFile)entry.getValue();
                   if (rfile != null) {
                      RandomAccessFile raf = (RandomAccessFile)c.get(rfile);
@@ -188,11 +186,11 @@ public class GameWorld {
    }
 
    private File getWorldContainer() {
-      return new File(Bukkit.getWorldContainer(), this.bH);
+      return new File(Bukkit.getWorldContainer(), this.MapID);
    }
 
    private void aX() throws IOException {
-      FileUtils.copyDirectory(this.bI.bi(), this.getWorldContainer());
+      FileUtils.copyDirectory(this.MapData.bi(), this.getWorldContainer());
       this.aY();
    }
 
